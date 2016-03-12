@@ -1,4 +1,4 @@
-package ca.kennethbuck;
+package com.kennethbuck.bensonapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

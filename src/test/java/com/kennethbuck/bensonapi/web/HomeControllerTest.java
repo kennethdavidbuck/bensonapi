@@ -1,4 +1,4 @@
-package ca.kennethbuck.controllers;
+package com.kennethbuck.bensonapi.web;
 
 import org.junit.Before;
 import org.junit.Test;
