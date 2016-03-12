@@ -1,6 +1,7 @@
 package com.kennethbuck.bensonapi.web;
 
 import com.kennethbuck.bensonapi.domain.Post;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,8 @@ public class PostController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Post show() {
-        return new Post(1, "Teaser", "Body", "Title");
+    public Post show(@PathVariable long id) {
+        return new Post(id, "Teaser", "Body", "Title");
     }
 
     @RequestMapping(method = RequestMethod.POST)
