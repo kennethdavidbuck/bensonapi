@@ -23,7 +23,6 @@ public class Post {
     private final String title;
 
     /**
-     *
      * @param id
      * @param teaser
      * @param body
