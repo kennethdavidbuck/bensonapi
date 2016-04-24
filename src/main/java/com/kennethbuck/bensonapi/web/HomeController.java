@@ -36,8 +36,5 @@ public class HomeController {
                 "\n" +
                 "</body>\n" +
                 "</html>\n";
-
-
-        //return "Benson API v0.1";
     }
 }
