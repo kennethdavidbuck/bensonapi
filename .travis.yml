@@ -8,3 +8,5 @@ install:
   - docker run —-name bensonapi -d -p 8080:8080 -t kdbuck/bensonapi
 script:
   - docker stop bensonapi
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push
