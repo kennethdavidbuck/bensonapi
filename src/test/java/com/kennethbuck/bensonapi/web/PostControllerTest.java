@@ -31,4 +31,10 @@ public class PostControllerTest {
         mvc.perform(MockMvcRequestBuilders.get("/api/posts").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
+
+    @Test
+    public void getPost() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/api/posts/1").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
 }
