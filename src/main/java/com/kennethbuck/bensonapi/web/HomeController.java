@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @RequestMapping("/")
+    @RequestMapping("/**")
     public String index() {
 
         return "<!DOCTYPE html>\n" +
