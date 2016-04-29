@@ -2,6 +2,8 @@ language: java
 sudo: required
 services:
   - docker
+before_install:
+- export GIT_TAG=$(git rev-parse HEAD)
 install:
   - mvn package
   - mvn docker:build
