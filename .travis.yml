@@ -2,10 +2,9 @@ language: java
 sudo: required
 services:
   - docker
-before_install:
-- export GIT_TAG=$(git rev-parse HEAD)
 install:
-  - mvn package
+  # pass git version in to add to docker image tag
+  - mvn package -Dbensonapi.git.tag=$(git rev-parse HEAD)
   - mvn docker:build
 script:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
