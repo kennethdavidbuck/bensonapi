@@ -5,7 +5,6 @@ services:
 install:
   # pass git tag
   - mvn clean package docker:build -Dbensonapi.build.git_tag=$(git rev-parse --short HEAD)
-  - mvn docker:build
 script:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push kdbuck/bensonapi
