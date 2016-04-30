@@ -3,8 +3,8 @@ sudo: required
 services:
   - docker
 install:
-  # pass git version in to add to docker image tag
-  - mvn package -Dbensonapi.git.tag=$(git rev-parse HEAD)
+  # pass git tag
+  - mvn package -Dbuild.git.tag=$(git rev-parse HEAD)
   - mvn docker:build
 script:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"

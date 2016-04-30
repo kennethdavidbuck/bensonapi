@@ -54,7 +54,7 @@
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>kdbuck</docker.image.prefix>
-        <bensonapi.git.tag></bensonapi.git.tag>
+        <build.git.tag></build.git.tag>
     </properties>
 
     <build>
@@ -71,7 +71,7 @@
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <imageTags>
-                        <imageTag>${project.version}-${bensonapi.git.tag}</imageTag>
+                        <imageTag>${project.version}-${build.git.tag}</imageTag>
                         <imageTag>latest</imageTag>
                     </imageTags>
                     <dockerDirectory>src/main/docker</dockerDirectory>
