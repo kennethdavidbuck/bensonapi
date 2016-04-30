@@ -27,7 +27,7 @@
     <name>bensonapi</name>
     <groupId>com.kennethbuck.bensonapi</groupId>
     <artifactId>bensonapi</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

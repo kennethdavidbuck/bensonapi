@@ -4,7 +4,7 @@ services:
   - docker
 install:
   # pass git tag
-  - mvn package -Dbensonapi.git.tag=$(git rev-parse HEAD)
+  - mvn package -Dbensonapi.git.tag=$(git rev-parse --short HEAD)
   - mvn docker:build
 script:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
